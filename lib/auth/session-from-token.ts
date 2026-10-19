@@ -70,7 +70,7 @@ export async function refreshAccessToken(): Promise<boolean> {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
-        "User-Agent": "deriv-platform/0.1 (OAuth refresh)",
+        "User-Agent": "tradecity/0.1 (OAuth refresh)",
       },
       body: body.toString(),
     });

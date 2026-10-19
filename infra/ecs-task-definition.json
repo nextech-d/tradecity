@@ -1,5 +1,5 @@
 {
-  "family": "deriv-platform",
+  "family": "tradecity",
   "networkMode": "awsvpc",
   "requiresCompatibilities": ["FARGATE"],
   "cpu": "512",
@@ -9,7 +9,7 @@
   "containerDefinitions": [
     {
       "name": "app",
-      "image": "ACCOUNT_ID.dkr.ecr.REGION.amazonaws.com/deriv-platform:latest",
+      "image": "ACCOUNT_ID.dkr.ecr.REGION.amazonaws.com/tradecity:latest",
       "essential": true,
       "portMappings": [
         {
@@ -34,11 +34,11 @@
       "secrets": [
         {
           "name": "SESSION_SECRET",
-          "valueFrom": "arn:aws:secretsmanager:REGION:ACCOUNT_ID:secret:deriv-platform/SESSION_SECRET"
+          "valueFrom": "arn:aws:secretsmanager:REGION:ACCOUNT_ID:secret:tradecity/SESSION_SECRET"
         },
         {
           "name": "ADMIN_SECRET",
-          "valueFrom": "arn:aws:secretsmanager:REGION:ACCOUNT_ID:secret:deriv-platform/ADMIN_SECRET"
+          "valueFrom": "arn:aws:secretsmanager:REGION:ACCOUNT_ID:secret:tradecity/ADMIN_SECRET"
         }
       ],
       "mountPoints": [
@@ -61,7 +61,7 @@
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
-          "awslogs-group": "/ecs/deriv-platform",
+          "awslogs-group": "/ecs/tradecity",
           "awslogs-region": "REGION",
           "awslogs-stream-prefix": "app"
         }

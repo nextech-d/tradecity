@@ -48,7 +48,7 @@ for (const pid of pids) {
 }
 
 if (killed.length === 0) {
-  console.log("No deriv-platform dev server found on ports 3000–3010.");
+  console.log("No tradecity dev server found on ports 3000–3010.");
 } else {
   console.log(`Stopped dev server(s): ${killed.join(", ")}`);
 }
