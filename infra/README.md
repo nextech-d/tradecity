@@ -14,7 +14,7 @@ Region: **`af-south-1`**. Replace placeholders before apply.
 ```bash
 export AWS_REGION=af-south-1
 export AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
-export ECR_REPO=deriv-platform
+export ECR_REPO=tradecity
 
 aws ecr create-repository --repository-name "$ECR_REPO" --region "$AWS_REGION" || true
 ```
@@ -38,7 +38,7 @@ GitHub Actions workflow `.github/workflows/docker-build.yml` builds the image on
 | `AWS_ACCESS_KEY_ID` | IAM user/role with ECR push |
 | `AWS_SECRET_ACCESS_KEY` | … |
 | `AWS_REGION` | `af-south-1` |
-| `ECR_REPOSITORY` | `deriv-platform` |
+| `ECR_REPOSITORY` | `tradecity` |
 | `NEXT_PUBLIC_DERIV_APP_ID` | Production app ID |
 | `NEXT_PUBLIC_DERIV_SIGNUP_URL` | Partner signup URL |
 

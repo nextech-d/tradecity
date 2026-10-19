@@ -42,7 +42,7 @@ jobs:
             echo "push=false" >> "$GITHUB_OUTPUT"
           fi
           echo "aws_region=${AWS_REGION:-af-south-1}" >> "$GITHUB_OUTPUT"
-          echo "ecr_repository=${ECR_REPOSITORY:-deriv-platform}" >> "$GITHUB_OUTPUT"
+          echo "ecr_repository=${ECR_REPOSITORY:-tradecity}" >> "$GITHUB_OUTPUT"
           echo "app_id=${NEXT_PUBLIC_DERIV_APP_ID:-000000}" >> "$GITHUB_OUTPUT"
           echo "signup_url=${NEXT_PUBLIC_DERIV_SIGNUP_URL:-}" >> "$GITHUB_OUTPUT"
 
@@ -53,7 +53,7 @@ jobs:
             --build-arg NEXT_PUBLIC_DEMO_MODE=true \
             --build-arg NEXT_PUBLIC_DERIV_APP_ID=000000 \
             --build-arg NEXT_PUBLIC_DERIV_SIGNUP_URL= \
-            -t deriv-platform:ci .
+            -t tradecity:ci .
 
       - name: Configure AWS credentials
         if: steps.mode.outputs.push == 'true'

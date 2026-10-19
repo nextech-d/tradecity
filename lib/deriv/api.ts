@@ -46,13 +46,13 @@ function derivHeaders(accessToken: string): HeadersInit {
     "Deriv-App-ID": derivConfig.appId,
     "Content-Type": "application/json",
     Accept: "application/json",
-    "User-Agent": "deriv-platform/0.1 (East Africa; OAuth PKCE)",
+    "User-Agent": "tradecity/0.1 (East Africa; OAuth PKCE)",
   };
 }
 
 const oauthFetchHeaders: HeadersInit = {
   "Content-Type": "application/x-www-form-urlencoded",
-  "User-Agent": "deriv-platform/0.1 (East Africa; OAuth PKCE)",
+  "User-Agent": "tradecity/0.1 (East Africa; OAuth PKCE)",
 };
 
 export async function exchangeCodeForToken(

@@ -236,7 +236,7 @@ sequenceDiagram
 ### 3.3 Repository Layout (Planned)
 
 ```
-deriv-platform/
+tradecity/
 ├── app/                          # Next.js App Router
 │   ├── (auth)/login/
 │   ├── (trade)/dashboard/

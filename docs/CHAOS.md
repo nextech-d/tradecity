@@ -107,7 +107,7 @@ For **live OAuth** staging, set `NEXT_PUBLIC_DEMO_MODE=false` and sign in first.
 
 ## Scenario 9 — Admin persistence (Docker)
 
-1. `docker build -t deriv-platform .`
+1. `docker build -t tradecity .`
 2. Run with data volume (see `docs/DEPLOY.md`):
    ```bash
    docker run -p 3000:3000 \
@@ -116,7 +116,7 @@ For **live OAuth** staging, set `NEXT_PUBLIC_DEMO_MODE=false` and sign in first.
      -e SESSION_SECRET=your-32-char-minimum-secret \
      -e NEXT_PUBLIC_DEMO_MODE=true \
      -e NEXT_PUBLIC_DERIV_APP_ID=000000 \
-     deriv-platform
+     tradecity
    ```
 3. Open `/admin` and `/admin/copy` → paste `ADMIN_SECRET`.
 4. Save a partner agent and a copy provider (mark active).

@@ -50,18 +50,18 @@ docker run -p 3000:3000 \
 ## Docker build & run
 
 ```bash
-docker build -t deriv-platform .
+docker build -t tradecity .
 docker run -p 3000:3000 \
   -e NEXT_PUBLIC_DERIV_APP_ID=your_app_id \
   -e SESSION_SECRET=your-32-char-minimum-secret \
   -e NEXT_PUBLIC_DEMO_MODE=false \
-  deriv-platform
+  tradecity
 ```
 
 Build-time public env (baked into client bundle):
 
 ```bash
-docker build -t deriv-platform \
+docker build -t tradecity \
   --build-arg NEXT_PUBLIC_DEMO_MODE=false \
   --build-arg NEXT_PUBLIC_DERIV_APP_ID=your_app_id \
   --build-arg NEXT_PUBLIC_DERIV_SIGNUP_URL=https://track.deriv.com/your-partner-link \
